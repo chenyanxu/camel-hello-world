@@ -2,7 +2,7 @@
   "kind": "Template",
   "apiVersion": "v1",
   "metadata": {
-    "name": "fuse-karaf",
+    "name": "karaf-s2i",
     "annotations": {
       "description": "This example shows how to create an S2I based Karaf based Fuse application",
       "tags": "instant-app,fuse,karaf",
