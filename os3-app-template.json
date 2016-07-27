@@ -36,7 +36,8 @@
             "kind": "ImageStream",
             "apiVersion": "v1",
             "metadata": {
-                "name": "s2i-karaf-${APP_NAME}",
+                "namespace": "openshift",
+                "name": "s2i-karaf",
                 "creationTimestamp": null,
                 "labels": {
                     "app": "${APP_NAME}"
@@ -104,7 +105,8 @@
                     "sourceStrategy": {
                         "from": {
                             "kind": "ImageStreamTag",
-                            "name": "s2i-karaf-${APP_NAME}:latest"
+                            "namesapce": "openshift",
+                            "name": "s2i-karaf:latest"
                         },
                         "incremental": true,
                         "forcePull": true,
