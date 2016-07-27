@@ -36,11 +36,13 @@
             "kind": "ImageStream",
             "apiVersion": "v1",
             "metadata": {
-                "namespace": "openshift",
-                "name": "s2i-karaf",
+                "name": "karaf-s2i-${APP_NAME}",
                 "creationTimestamp": null,
                 "labels": {
                     "app": "${APP_NAME}"
+                },
+                "annotations":{
+                  "openshift.io/image.insecureRepository": "true"
                 }
             },
             "spec": {
@@ -105,8 +107,7 @@
                     "sourceStrategy": {
                         "from": {
                             "kind": "ImageStreamTag",
-                            "namesapce": "openshift",
-                            "name": "s2i-karaf:latest"
+                            "name": "karaf-s2i-${APP_NAME}:latest"
                         },
                         "incremental": true,
                         "forcePull": true,
