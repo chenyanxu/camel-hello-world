@@ -1,5 +1,5 @@
 # Camel Log QuickStart
-
+本工程用于演示https://github.com/chenyanxu/karaf-s2i.git,先git lone 源码，然后创建模板文件，再通过模板文件创建app。
 This quickstart shows a simple Apache Camel application that logs a message to the server log every 5th second.
 
 This example is implemented using solely the XML DSL (there is no Java code). The source code is provided in the following XML file `src/main/resources/OSGI-INF/blueprint/camel-log.xml`.
